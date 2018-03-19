@@ -8,10 +8,10 @@ var userSchema = mongoose.Schema({
     role:String
   });
 
-  userSchema.post('save', function(error, doc, next) {
-    console.log(error.errors.email.message,error.errors.name.message);
-    next();
-});   
+//   userSchema.post('save', function(error, doc, next) {
+//     console.log(error.errors.email.message,error.errors.name.message);
+//     next();
+// });   
 
 let UserModel = mongoose.model('users',userSchema);  
 
